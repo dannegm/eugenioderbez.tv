@@ -1,0 +1,121 @@
+@media (max-width: 340px) {
+	html {
+		background: #36866a url('../img/patterns/fondo2.png');
+		background-size: 200px;
+		overflow: auto;
+	}
+	.menu{
+		display:none;
+	}
+	nav#nav{
+		visibility:visible;
+	}
+	#paralax_ciudad, #plecas {
+		display: none;
+	}
+	#nav #logo {
+		display: block;
+	}
+	#ciudad {
+		display: block;
+		background-image: url('../img/ciudadcompleteheader.jpg');
+		height: 100px;
+		position: relative;
+		margin: 0;
+		margin-top: 60px;
+		top: 0;
+		width: 320px;
+	}
+	#footer {
+		display: block;
+	}
+	#intro {
+		position: relative;
+		width: 320px;
+		margin: 0;
+		margin-bottom: 20px;
+		left: 0;
+	}
+	#intro h1 {
+		display: none;
+	}
+	#intro p {
+		display: block !important;
+		-webkit-animation: none;
+		-moz-animation: none;
+		animation: none;
+		padding: 20px;
+		width: 280px;
+		margin: 0;
+		margin-top: 10px;
+		font-size: 13px;
+	}
+	.popup {
+		display: block;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0 !important;
+		z-index: 1;
+		width: 320px;
+		height: auto;
+		max-height: 1000px;
+		overflow: hidden;
+	}
+	.popup h2 {
+		width: 320px;
+		margin: 0;
+		background-size: cover;
+		padding-top: 12px;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: -15px;
+	}
+	.popup .close {
+		display: none;
+	}
+	.popup .p {
+		width: 280px;
+		margin: 0;
+		padding: 20px;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 10px;
+		background: rgb(238,183,39);
+	}
+	.popup p {
+	}
+	.popup .btn {
+		display: block;
+		margin: 10px 0;
+	}
+	.popup img {
+		width: 280px;
+		display: block;
+		margin-bottom: 30px;
+	}
+		.popup img.hide {
+			display: none;
+		}
+		.popup img.left {
+			width: 120px;
+			margin-right: 20px;
+			margin-bottom: 10px;
+			display: inline;
+			float: left;
+		}
+		.popup img.right {
+			width: 120px;
+			margin-left: 20px;
+			margin-bottom: 10px;
+			display: inline;
+			float: right;
+		}
+	.popup iframe {
+		width: 280px;
+		height: 158px;
+	}
+
+
+
+
