@@ -1730,4 +1730,7 @@ display:block;
 	.video-content article h1{
 		font-size:25px;
 	}
+	#nav-dots{
+		display: none;
+	}
 }
