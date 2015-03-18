@@ -161,7 +161,7 @@
 										<?php $i = 1; ?>
 										@foreach ($videos as $video)
 											<div class="vid-content">
-												<article class="video" data-uid="{{$video->vuid}}" style="background: #000 url('pictures/small/{{$video->img->url}}') center no-repeat; background-size: cover;">
+												<article class="video" data-uid="{{$video->vuid}}" style="background: #000 url('pictures/small/{{--$video->img->url--}}') center no-repeat; background-size: cover;">
 													<a href="video/{{$video->id}}" title="{{$video->title}}">
 														<div class="ft">
 															<h1>{{str_replace('"', '', $video->title)}}</h1>

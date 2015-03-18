@@ -5,6 +5,11 @@ $(document).ready(function(){
 		veintiunoNueve();
 	});
 
+	$('.sl-slide').click(function(){
+		link = $(this).find('a');
+		window.location.href = link;
+	});
+
 	$('nav.mobil .button').click(function(e){
 		e.stopPropagation();
 		$('nav.mobil ul').slideToggle(200);

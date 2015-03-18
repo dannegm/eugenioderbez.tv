@@ -102,43 +102,17 @@
 		<section class="slider">
 			<h1 style="margin:0;padding:10px 0 30px 0;margin-bottom:-20px;font-family:SierraMadre;text-align:center;font-size:25px;-webkit-font-smoothing:antialiased">Destacados</h1>
 			<div id="slider" class="sl-slider-wrapper">
+				@foreach($slider as $s)
 				<div class="sl-slider">
-					<div class="sl-slide" data-uid="uid_HBTMfanO" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-						<div class="sl-slide-inner" style="background-image: url('pictures/normal/{{$videos[0]->img->url}}'); background-position: center;">
-							<h1><a href="video/{{$videos[0]->id}}">{{$videos[0]->title}}</a></h1>
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<a href="{{$s[0]->type == "youtu" ? "video" : $s[0]->type}}/{{$s[0]->id}}">
+						<div class="sl-slide-inner" style="background-image: url('pictures/medium/{{$s[0]->img->url}}'); background-position: center; background-size: cover">
+							<h1>{{$s[0]->title}}</h1>
 						</div>
+						</a>
 					</div>
 				</div>
-				<div class="sl-slider">
-					<div class="sl-slide" data-uid="uid_HBTMfanO" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-						<div class="sl-slide-inner" style="background-image: url('pictures/normal/{{$notas[0]->img->url}}'); background-position: center;">
-							<h1><a href="video/{{$notas[0]->id}}">{{$notas[0]->title}}</a></h1>
-						</div>
-					</div>
-				</div>
-				<div class="sl-slider">
-					<div class="sl-slide" data-uid="uid_HBTMfanO" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-						<div class="sl-slide-inner" style="background-image: url('pictures/normal/{{$videos[1]->img->url}}'); background-position: center;">
-							<h1><a href="video/{{$videos[1]->id}}">{{$videos[1]->title}}</a></h1>
-						</div>
-					</div>
-				</div>
-				<div class="sl-slider">
-					<div class="sl-slide" data-uid="uid_HBTMfanO" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-						<div class="sl-slide-inner" style="background-image: url('pictures/normal/{{$notas[1]->img->url}}'); background-position: center;">
-							<h1><a href="video/{{$notas[1]->id}}">{{$notas[1]->title}}</a></h1>
-						</div>
-					</div>
-				</div>
-				<div class="sl-slider">
-					<div class="sl-slide" data-uid="uid_HBTMfanO" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-						<div class="sl-slide-inner" style="background-image: url('pictures/normal/{{$videos[2]->img->url}}'); background-position: center;">
-							<h1><a href="video/{{$videos[0]->id}}">{{$videos[0]->title}}</a></h1>
-						</div>
-					</div>
-				</div>
-
-
+				@endforeach
 
 				<nav id="nav-arrows" class="nav-arrows">
 					<span class="nav-arrow-prev">Anterior</span>
