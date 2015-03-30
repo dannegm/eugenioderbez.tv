@@ -123,6 +123,6 @@ Route::group(array('before' => 'auth', 'prefix' => 'appanel'), function(){
 
 App::error(function(Exception $exception)
 {
-    //return Redirect::to(URL::to('/'));
+    return Redirect::to(URL::to('/'));
 });
 

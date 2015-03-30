@@ -54,7 +54,7 @@ class IndexController extends Controller {
 	public function carnales(){
 
 		//videos
-		$videos = Video::orderBy('id', 'desc')->paginate(12);
+		$videos = Video::orderBy('id', 'desc')->whereStatus(1)->paginate(12);
 
 		//categorías
 		$categories = Category::categoryType('video')->orderBy('name', 'asc')->get();
@@ -101,14 +101,9 @@ class IndexController extends Controller {
 	}
 
 	public function legales(){
-		$videos_nav = Cache::remember('videos', 1440, function()
-		{
-			return Video::nav()->get();
-		});
-		$notas_nav= Cache::remember('videos', 1440, function()
-		{
-			return Nota::nav()->get();
-		});
+		$videos_nav = Video::nav()->remember(4)->get();
+		$notas_nav = Nota::nav()->remember(4)->get();
+		
 		$data = array(
 			'title' => 'Eugenio Derbez',
 			'videos_nav' => $videos_nav,
@@ -203,7 +198,7 @@ class IndexController extends Controller {
 	}
 
 	public function preguntame(){
-		$notas = Nota::orderBy('id', 'desc')->paginate(10);
+		$notas = Nota::orderBy('id', 'desc')->whereStatus(1)->paginate(10);
 
 		$videos_nav = Video::nav()->remember(4)->get();
 		$notas_nav = Nota::nav()->remember(4)->get();
@@ -234,10 +229,7 @@ class IndexController extends Controller {
 	}
 
 	public function video($id){
-		$videos = Cache::remember('videos', 1440, function()
-		{
-			return Video::orderBy('id', 'desc')->take(3)->get();
-		});
+		$videos = Video::orderBy('id', 'desc')->whereStatus(1)->take(3)->get();
 
 		//recomendados
 		$destacadas = Configurando::where('tipe', '=', 'video_destacados')->first();
