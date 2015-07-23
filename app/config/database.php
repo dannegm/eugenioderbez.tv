@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'derbesito',
-			'username'  => 'root',
-			'password'  => '3ug3n10.d3rb35',
+			'database'  => 'derbez',
+			'username'  => 'derbez',
+			'password'  => 'd3r.b35',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => 'derbez_',
